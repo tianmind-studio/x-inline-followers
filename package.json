@@ -1,0 +1,10 @@
+{
+  "name": "x-inline-followers",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Passive, local-only inline follower badges for X.",
+  "scripts": {
+    "test": "node --test tests/core.test.mjs",
+    "package": "node tools/package.mjs"
+  }
+}

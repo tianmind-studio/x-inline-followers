@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>X 粉丝数</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header><span class="mark" aria-hidden="true">↗</span><div><h1>X 粉丝数</h1><p>名字旁，多一点参考。</p></div></header>
+  <main>
+    <label class="toggle-row" for="enabled"><span>显示粉丝徽标</span><input id="enabled" type="checkbox" role="switch" checked></label>
+    <label class="format-label" for="format">数字格式</label>
+    <select id="format"><option value="compact">简洁 · 17.4万</option><option value="exact">完整 · 174,000</option></select>
+    <div class="status" role="status" id="status">正在读取当前页面…</div>
+    <p class="hint" id="hint">安装后刷新 X 页面，正常浏览即可。</p>
+  </main>
+  <footer>只用页面已有数据 · 不上传 · 无额外 API 请求</footer>
+  <script src="popup.js"></script>
+</body>
+</html>

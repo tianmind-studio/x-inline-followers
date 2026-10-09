@@ -1,0 +1,22 @@
+.xfc-badge[data-xfc-badge] {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  margin-inline-start: 6px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: rgba(29, 155, 240, 0.11);
+  color: rgb(29, 155, 240);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-decoration: none;
+  font-variant-numeric: tabular-nums;
+  cursor: help;
+}
+@media (forced-colors: active) {
+  .xfc-badge[data-xfc-badge] { color: LinkText; border: 1px solid LinkText; }
+}

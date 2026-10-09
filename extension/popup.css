@@ -1,0 +1,26 @@
+:root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif; color: #0f1419; background: #fff; }
+* { box-sizing: border-box; }
+body { width: 310px; margin: 0; padding: 22px; }
+header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+.mark { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; background: #1d9bf0; color: #fff; font-size: 27px; font-weight: 700; }
+h1 { margin: 0; font-size: 19px; letter-spacing: -.4px; }
+header p { margin: 5px 0 0; font-size: 12px; color: #536471; }
+.toggle-row { display: flex; justify-content: space-between; align-items: center; font-size: 14px; font-weight: 600; cursor: pointer; }
+input[type=checkbox] { appearance: none; width: 34px; height: 20px; margin: 0; padding: 3px; border-radius: 12px; background: #8b98a5; cursor: pointer; }
+input[type=checkbox]::before { content: ""; display: block; width: 14px; height: 14px; border-radius: 50%; background: #fff; transition: transform .15s; }
+input:checked { background: #1d9bf0; }
+input:checked::before { transform: translateX(14px); }
+.format-label { display: block; margin: 20px 0 8px; font-size: 12px; color: #536471; }
+select { width: 100%; padding: 9px 10px; border: 1px solid #cfd9de; border-radius: 8px; background: #fff; color: #0f1419; font: inherit; font-size: 13px; }
+.status { margin-top: 20px; padding: 10px 12px; background: rgba(29,155,240,.09); color: #087bbd; border-radius: 8px; font-size: 13px; line-height: 1.5; }
+.hint { color: #536471; font-size: 12px; line-height: 1.7; margin: 9px 0 0; }
+footer { margin-top: 21px; border-top: 1px solid #eff3f4; padding-top: 13px; color: #536471; font-size: 10px; white-space: nowrap; }
+:focus-visible { outline: 2px solid #1d9bf0; outline-offset: 3px; }
+@media(prefers-color-scheme: dark) {
+  :root { background: #15202b; color: #f7f9f9; }
+  header p,.format-label,.hint,footer { color: #8b98a5; }
+  select { background: #1e2732; color: #f7f9f9; border-color: #38444d; }
+  footer { border-color: #38444d; }
+  .status { color: #57b5f5; }
+}
+@media(prefers-reduced-motion: reduce) { input[type=checkbox]::before { transition: none; } }

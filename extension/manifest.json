@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "X 粉丝数 · Inline Followers",
+  "version": "1.0.0",
+  "description": "在 X 信息流和用户列表的名字旁显示粉丝数，只使用页面已收到的数据。",
+  "minimum_chrome_version": "111",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "X 粉丝数",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://www.x.com/*", "https://twitter.com/*", "https://www.twitter.com/*"],
+      "js": ["observer.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://x.com/*", "https://www.x.com/*", "https://twitter.com/*", "https://www.twitter.com/*"],
+      "js": ["content.js"],
+      "css": ["badges.css"],
+      "run_at": "document_start",
+      "world": "ISOLATED"
+    }
+  ]
+}
